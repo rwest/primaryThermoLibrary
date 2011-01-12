@@ -4,6 +4,8 @@ It is based on the paper by Mebel et al. [1].
 
 Geometries from Figure 1 were created in GaussView and saved as Gaussian .gjf
 files. 
+Cartesian coordinates were put into CanTherm input .dat files, along with 
+vibrational frequencies taken from the supplementary material of the paper [1].
 
 [1] A. M. Mebel, M. Hayashi, V. V. Kislov, and S. H. Lin. Theoretical Study of
 Oxygen Isotope Exchange and Quenching in the O(1D) + CO2 Reaction. The Journal
