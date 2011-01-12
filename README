@@ -12,11 +12,16 @@ into RMG syntax, and to change the H298 values, which are derived from the
 relative energies given in the paper [1]. See the source of combine.py for
 details.
 
+The .chemgraph files, in RMG syntax, must start with the species name, and end
+with a blank line. Only species with a valid chemgraph are included in the
+library, others are commented out.
+
 To run the calculations, just type 'make'.
 (The makefile must have the correct path to your CanTherm installation,
 which is currently assumed to be adjacent to your working directory)
 
-The results end up in `results.txt`
+The results end up in Library.txt and RMG_Dictionary.txt
+
 
 [1] A. M. Mebel, M. Hayashi, V. V. Kislov, and S. H. Lin. Theoretical Study of
 Oxygen Isotope Exchange and Quenching in the O(1D) + CO2 Reaction. The Journal
