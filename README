@@ -1,0 +1,10 @@
+This is a small project to get thermochemistry of CO3 into RMG.
+
+It is based on the paper by Mebel et al. [1].
+
+
+[1] A. M. Mebel, M. Hayashi, V. V. Kislov, and S. H. Lin. Theoretical Study of
+Oxygen Isotope Exchange and Quenching in the O(1D) + CO2 Reaction. The Journal
+of Physical Chemistry A, 108(39):7983–7994, September 2004.
+http://dx.doi.org/10.1021/jp049315h
+
