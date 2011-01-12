@@ -7,6 +7,10 @@ files.
 Cartesian coordinates were put into CanTherm input .dat files, along with 
 vibrational frequencies taken from the supplementary material of the paper [1].
 
+To run the calculations, just type 'make'.
+(The makefile must have the correct path to your CanTherm installation,
+which is currently assumed to be adjacent to your working directory)
+
 [1] A. M. Mebel, M. Hayashi, V. V. Kislov, and S. H. Lin. Theoretical Study of
 Oxygen Isotope Exchange and Quenching in the O(1D) + CO2 Reaction. The Journal
 of Physical Chemistry A, 108(39):7983–7994, September 2004.
