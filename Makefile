@@ -1,7 +1,7 @@
 
 ALL = s1.out s2.out s4.out t1.out t2.out
 LIBRARY = Library.txt
-DICTIONARY = RMG_Dictionary.txt
+DICTIONARY = Dictionary.txt
 
 data: $(LIBRARY) $(DICTIONARY)
 

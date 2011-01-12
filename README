@@ -20,7 +20,7 @@ To run the calculations, just type 'make'.
 (The makefile must have the correct path to your CanTherm installation,
 which is currently assumed to be adjacent to your working directory)
 
-The results end up in Library.txt and RMG_Dictionary.txt
+The results end up in Library.txt and Dictionary.txt
 
 
 [1] A. M. Mebel, M. Hayashi, V. V. Kislov, and S. H. Lin. Theoretical Study of
