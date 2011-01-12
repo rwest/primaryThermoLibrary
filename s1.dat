@@ -14,7 +14,7 @@ FREQ
 6
 516.4 586.3 685.1 1029.4 1071.2 2082.9
 ENERGY 0 CBS-QB3    
-EXTSYM 2                              
+EXTSYM 2 ! C2v
 NELEC 1                               
 ROTORS 0
 !BAC for C-H C-C C=C C.TB.C  O-H  C-O C=O
