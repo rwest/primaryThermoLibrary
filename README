@@ -7,6 +7,11 @@ files.
 Cartesian coordinates were put into CanTherm input .dat files, along with 
 vibrational frequencies taken from the supplementary material of the paper [1].
 
+The CanTherm output files are then processed by a python script to combine them
+into RMG syntax, and to change the H298 values, which are derived from the
+relative energies given in the paper [1]. See the source of combine.py for
+details.
+
 To run the calculations, just type 'make'.
 (The makefile must have the correct path to your CanTherm installation,
 which is currently assumed to be adjacent to your working directory)
