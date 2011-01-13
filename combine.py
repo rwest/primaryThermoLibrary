@@ -8,8 +8,13 @@ H = dict()
 # From Fraklin's DFT-QCI thermo
 # CO2	      -94.36       50.99        8.87        9.84       10.63       11.26       12.23       12.90       13.82  0.0  0.0  0.0 
 # O	       59.64       36.40        4.96        4.96        4.96        4.96        4.96        4.96        4.96  0.0  0.0  0.0 
-# which means the best-guess for CO2 + O(3P) is:
+# So for consintency with those,
 H['CO2 + O(3P)'] = 59.64 + -94.36
+# From NIST webbook
+# CO2 = -94.054    51.097
+# O = 59.555 38.4940
+# which means the best-guess for CO2 + O(3P) is:
+H['CO2 + O(3P)'] = 59.555 + -94.054
 
 # calculate the rest via energy differences taken from J Pys Chem A 108(39) p7985
 H['s1'] = H['CO2 + O(3P)'] + 45.4 - 48.8 # using "best estimate" for relative energies
