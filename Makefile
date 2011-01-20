@@ -1,5 +1,6 @@
 
-ALL = s1.out s2.out s4.out t1.out t2.out
+ALL = s1.out s2.out s4.out t1.out t2.out \
+      cyclopropene12diyl.out cyclopropynylidyne.out
 LIBRARY = Library.txt
 DICTIONARY = Dictionary.txt
 
