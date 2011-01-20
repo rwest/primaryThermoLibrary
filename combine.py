@@ -42,11 +42,11 @@ for line in instream:
     Cp_cal_mol_K_string = ("%8s"*7)%tuple(Cp_cal_mol_K_list)
     H_kcal_mol = float(H_cal_mol)/1e3
     # Having done all that, replace it with the value from the dictionary
-    H_kcal_mol = H[species_name]
+    H_kcal_mol = "%.2f" % float(H[species_name])
     try:
         chemgraph_name = file(species_name+'.chemgraph').readline().strip()
     except IOError:
-        chemgraph_name = '//NoChemgraph//'+species_name
-    print "%-10s %10s %10s %s    0.0 0.0 0.0"%(chemgraph_name, H_kcal_mol, S_cal_mol_K, Cp_cal_mol_K_string )
+        chemgraph_name = '//No %s.chemgraph//' % species_name
+    print "%-20s %8s %8s %s   0.0 0.0 0.0"%(chemgraph_name, H_kcal_mol, S_cal_mol_K, Cp_cal_mol_K_string )
     fileinput.nextfile()
 
