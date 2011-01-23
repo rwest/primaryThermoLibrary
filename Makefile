@@ -1,22 +1,25 @@
 
-ALL = s1.out s2.out s4.out t1.out t2.out \
-      cyclopropene12diyl.out cyclopropynylidyne.out
+SPECIES = s1 s2 s4 t1 t2 \
+          cyclopropene12diyl cyclopropynylidyne
 LIBRARY = Library.txt
 DICTIONARY = Dictionary.txt
+DATADIR = data
+
+CANTHERMOUT=$(patsubst %,$(DATADIR)/%.out,$(SPECIES))
 
 data: $(LIBRARY) $(DICTIONARY)
 
-$(LIBRARY): $(ALL) combine.py
-	python combine.py $(ALL) | tee $(LIBRARY)
+$(LIBRARY): $(CANTHERMOUT) combine.py
+	python combine.py $(CANTHERMOUT) | tee $(LIBRARY)
 
-$(DICTIONARY): *.chemgraph
-	cat *.chemgraph > $(DICTIONARY)
+$(DICTIONARY): $(DATADIR)/*.chemgraph
+	cat $(DATADIR)/*.chemgraph > $(DICTIONARY)
 
-cantherm: $(ALL)
+cantherm: $(CANTHERMOUT)
 
 %.out : %.dat
 	python ../CanTherm/source/CanTherm.py $< | tee $@
 	mv cantherm.out $*.log
 
 clean:
-	rm -f $(ALL) $(LIBRARY) $(DICTIONARY)
+	rm -f $(CANTHERMOUT) $(LIBRARY) $(DICTIONARY)

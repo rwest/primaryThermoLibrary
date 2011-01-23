@@ -35,7 +35,8 @@ H['cyclopropene12diyl'] = H['cyclopropenylidene'] + (2067.9 - 1771.95)/4.184 #  
 instream = fileinput.input()
 for line in instream:
     assert fileinput.isfirstline()
-    species_name = os.path.splitext(fileinput.filename())[0]
+    filepath, filename = os.path.split(fileinput.filename())
+    species_name = os.path.splitext(filename)[0] # discard the file extension
     H_cal_mol, S_cal_mol_K = instream.next().split()
     H_J_mol, S_J_mol_K = instream.next().split()
     Cp_cal_mol_K_list = instream.next().split()
@@ -44,7 +45,7 @@ for line in instream:
     # Having done all that, replace it with the value from the dictionary
     H_kcal_mol = "%.2f" % float(H[species_name])
     try:
-        chemgraph_name = file(species_name+'.chemgraph').readline().strip()
+        chemgraph_name = file(os.path.join(filepath,species_name+'.chemgraph')).readline().strip()
     except IOError:
         chemgraph_name = '//No %s.chemgraph//' % species_name
     print "%-20s %8s %8s %s   0.0 0.0 0.0"%(chemgraph_name, H_kcal_mol, S_cal_mol_K, Cp_cal_mol_K_string )
