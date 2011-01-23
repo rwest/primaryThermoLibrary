@@ -1,16 +1,12 @@
-This is a small project to get thermochemistry of CO3 into RMG.
+This is a small project to get thermochemistry of CO3 and other small species into RMG.
 
-It is based on the paper by Mebel et al. [1].
-
-Geometries from Figure 1 were created in GaussView and saved as Gaussian .gjf
-files. 
-Cartesian coordinates were put into CanTherm input .dat files, along with 
-vibrational frequencies taken from the supplementary material of the paper [1].
+Geometries were created in GaussView and saved as Gaussian .gjf files.
+Cartesian coordinates were transferred into CanTherm input .dat files,
+along with vibrational frequencies.
 
 The CanTherm output files are then processed by a python script to combine them
-into RMG syntax, and to change the H298 values, which are derived from the
-relative energies given in the paper [1]. See the source of combine.py for
-details.
+into RMG syntax, and to change the H298 values, which are stored or calculated
+in combine.py.
 
 The .chemgraph files, in RMG syntax, must start with the species name, and end
 with a blank line. Only species with a valid chemgraph are included in the
@@ -22,11 +18,17 @@ which is currently assumed to be adjacent to your working directory)
 
 The results end up in Library.txt and Dictionary.txt
 
+--
+For CO3 isomers:
+Data is from the paper by Mebel et al. [1].
+Geometries are from Figure 1.
+Vibrational frequencies from the supplementary material.
+H298 values are derived from the relative energies given in the paper.
 
-It now also contains some C3Hn species.
-Geometries from [2] and frequencies from [3]
-
-
+For C3Hn species:
+Geometries from [2] and frequencies from [3].
+H298 values from a mixture of the two.
+--
 
 [1] A. M. Mebel, M. Hayashi, V. V. Kislov, and S. H. Lin. Theoretical Study of
 Oxygen Isotope Exchange and Quenching in the O(1D) + CO2 Reaction. The Journal
@@ -37,7 +39,6 @@ http://dx.doi.org/10.1021/jp049315h
 Accurate ab initio computation of thermochemical data for C3Hx
 (x=0,...,4)(x=0,...,4) species. Chemical Physics, 346(1-3):56–68, May 2008.
 http://dx.doi.org/10.1016/j.chemphys.2008.01.057
-
 
 [3] T. L. Nguyen, A. M. Mebel, and R. I. Kaiser. A Theoretical Investigation
 of the Triplet Carbon Atom C(3P) + Vinyl Radical C2H3(2A’) Reaction and
