@@ -16,15 +16,15 @@ H['CO2 + O(3P)'] = 59.64 + -94.36
 # which means the best-guess for CO2 + O(3P) is:
 H['CO2 + O(3P)'] = 59.555 + -94.054
 
-# calculate the rest via energy differences taken from J Pys Chem A 108(39) p7985
-H['s1'] = H['CO2 + O(3P)'] + 45.4 - 48.8 # using "best estimate" for relative energies
-H['s2'] = H['s1'] + 47.2 - 47.1          # using  MRCI+Q(16,13)/6-311+G(3df) + ZPE[CASSCF(16,13)/6-311G(d)]
-H['t1'] = H['CO2 + O(3P)'] + 47.7 - 24.7 # using  MRCI+Q(16,13)/6-311+G(3df) + ZPE[CASSCF(16,13)/6-311G(d)]
-H['t2'] = H['CO2 + O(3P)'] + 47.7 + 15.5 # using  MRCI+Q(16,13)/6-311+G(3df) + ZPE[CASSCF(16,13)/6-311G(d)]
-H['s4'] = H['s1'] + 47.2 - 27.1          # using  MRCI+Q(16,13)/6-311+G(3df) + ZPE[CASSCF(16,13)/6-311G(d)]
+# Calculate the other CO3 species via energy differences taken from J Pys Chem A 108(39) p7985
+H['CO3s1'] = H['CO2 + O(3P)'] + 45.4 - 48.8    # using "best estimate" for relative energies
+H['CO3s2'] = H['CO3s1'] + 47.2 - 47.1          # using  MRCI+Q(16,13)/6-311+G(3df) + ZPE[CASSCF(16,13)/6-311G(d)]
+H['CO3t1'] = H['CO2 + O(3P)'] + 47.7 - 24.7    # using  MRCI+Q(16,13)/6-311+G(3df) + ZPE[CASSCF(16,13)/6-311G(d)]
+H['CO3t2'] = H['CO2 + O(3P)'] + 47.7 + 15.5    # using  MRCI+Q(16,13)/6-311+G(3df) + ZPE[CASSCF(16,13)/6-311G(d)]
+H['CO3s4'] = H['CO3s1'] + 47.2 - 27.1          # using  MRCI+Q(16,13)/6-311+G(3df) + ZPE[CASSCF(16,13)/6-311G(d)]
 #  NB. this neglects differences in the integrals of Cp between 0 and 298 K.
 
-# these are taken from T. L. Nguyen, A. M. Mebel, and R. I. Kaiser. (2001)
+# The following are taken from T. L. Nguyen, A. M. Mebel, and R. I. Kaiser. (2001)
 # http://pubs.acs.org/doi/abs/10.1021/jp003224c
 H['cyclopropenylidene'] = 117.4 # kcal/mol singlet cylopropenylidene. CH1=C=CH1  (C2v, 1A1)
 H['cyclopropynylidyne'] = 169.8 # kcal/mol  

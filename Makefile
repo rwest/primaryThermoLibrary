@@ -1,5 +1,5 @@
 
-SPECIES = s1 s2 s4 t1 t2 \
+SPECIES = CO3s1 CO3s2 CO3s4 CO3t1 CO3t2 \
           cyclopropene12diyl cyclopropynylidyne
 LIBRARY = Library.txt
 DICTIONARY = Dictionary.txt
